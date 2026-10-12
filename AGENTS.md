@@ -55,6 +55,9 @@ googletrans-all/
 ├── scripts/
 │   ├── sync_dashboard_data.py        # Synchronizes runner output to dashboard/public/results.json
 │   └── dev.sh                        # Development helper script
+├── tests/                            # Unit test suite for harness and config integrity
+├── requirements.txt                  # Core harness dependencies
+├── requirements-harness.txt          # Runner dependencies (references requirements.txt)
 ├── README.md                         # Documentation and badges
 └── AGENTS.md                         # Agentic guide (this file)
 ```

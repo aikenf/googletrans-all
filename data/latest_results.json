@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T09:16:19.227013+00:00",
+  "generated_at": "2026-10-12T10:48:42.561880+00:00",
   "metadata": {
     "title": "Googletrans Implementations & Forks Live Matrix",
     "repository": "https://github.com/aikenf/googletrans-all",
@@ -13,8 +13,8 @@
     "passed": 7,
     "failed": 4,
     "pass_rate": 63.6,
-    "total_downloads_lifetime": 100151650,
-    "total_downloads_2026": 19759894,
+    "total_downloads_lifetime": 100151688,
+    "total_downloads_2026": 19815716,
     "total_downloads_last_month": 1853727
   },
   "packages": [
@@ -30,11 +30,11 @@
       "latest_release_date": "2025-01-01T14:12:00.321293Z",
       "downloads": {
         "lifetime": 98000000,
-        "year_2026": 19253816,
-        "year_2026_with_mirrors": 19262447,
+        "year_2026": 19303418,
+        "year_2026_with_mirrors": 19312120,
         "last_month": 1748758,
-        "last_week": 610063,
-        "last_day": 88438
+        "last_week": 504775,
+        "last_day": 25263
       },
       "test_result": {
         "status": "passed",
@@ -78,11 +78,11 @@
       "latest_release_date": "2022-04-13T14:48:07.745362Z",
       "downloads": {
         "lifetime": 2000000,
-        "year_2026": 487522,
-        "year_2026_with_mirrors": 488196,
+        "year_2026": 493623,
+        "year_2026_with_mirrors": 494308,
         "last_month": 102950,
-        "last_week": 38515,
-        "last_day": 4610
+        "last_week": 34846,
+        "last_day": 2483
       },
       "test_result": {
         "status": "passed",
@@ -126,11 +126,11 @@
       "latest_release_date": "2023-12-04T04:43:56.370356Z",
       "downloads": {
         "lifetime": 23000,
-        "year_2026": 4546,
-        "year_2026_with_mirrors": 4924,
+        "year_2026": 4550,
+        "year_2026_with_mirrors": 4934,
         "last_month": 791,
-        "last_week": 189,
-        "last_day": 27
+        "last_week": 192,
+        "last_day": 1
       },
       "test_result": {
         "status": "passed",
@@ -174,11 +174,11 @@
       "latest_release_date": "2024-10-24T18:12:33.324166Z",
       "downloads": {
         "lifetime": 15000,
-        "year_2026": 1860,
-        "year_2026_with_mirrors": 2241,
+        "year_2026": 1862,
+        "year_2026_with_mirrors": 2250,
         "last_month": 23,
-        "last_week": 4,
-        "last_day": 1
+        "last_week": 5,
+        "last_day": 0
       },
       "test_result": {
         "status": "passed",
@@ -222,11 +222,11 @@
       "latest_release_date": "2024-06-19T11:46:56.381725Z",
       "downloads": {
         "lifetime": 4000,
-        "year_2026": 133,
-        "year_2026_with_mirrors": 588,
+        "year_2026": 138,
+        "year_2026_with_mirrors": 601,
         "last_month": 14,
-        "last_week": 3,
-        "last_day": 0
+        "last_week": 7,
+        "last_day": 3
       },
       "test_result": {
         "status": "passed",
@@ -270,8 +270,8 @@
       "latest_release_date": "2024-06-29T13:22:07.412679Z",
       "downloads": {
         "lifetime": 3000,
-        "year_2026": 123,
-        "year_2026_with_mirrors": 361,
+        "year_2026": 125,
+        "year_2026_with_mirrors": 367,
         "last_month": 10,
         "last_week": 5,
         "last_day": 0
@@ -317,12 +317,12 @@
       "latest_release": "4.1.0",
       "latest_release_date": "2026-10-08T01:45:02.157705Z",
       "downloads": {
-        "lifetime": 650,
-        "year_2026": 215,
-        "year_2026_with_mirrors": 650,
+        "lifetime": 688,
+        "year_2026": 240,
+        "year_2026_with_mirrors": 709,
         "last_month": 0,
-        "last_week": 215,
-        "last_day": 17
+        "last_week": 240,
+        "last_day": 8
       },
       "test_result": {
         "status": "passed",
@@ -366,11 +366,11 @@
       "latest_release_date": "2024-12-13T14:59:26.769903Z",
       "downloads": {
         "lifetime": 84000,
-        "year_2026": 9876,
-        "year_2026_with_mirrors": 10557,
+        "year_2026": 9946,
+        "year_2026_with_mirrors": 10628,
         "last_month": 1013,
-        "last_week": 248,
-        "last_day": 19
+        "last_week": 291,
+        "last_day": 38
       },
       "test_result": {
         "status": "failed",
@@ -414,11 +414,11 @@
       "latest_release_date": "2023-02-15T07:30:50.094989Z",
       "downloads": {
         "lifetime": 11000,
-        "year_2026": 1106,
-        "year_2026_with_mirrors": 1484,
+        "year_2026": 1111,
+        "year_2026_with_mirrors": 1496,
         "last_month": 89,
         "last_week": 33,
-        "last_day": 3
+        "last_day": 2
       },
       "test_result": {
         "status": "failed",
@@ -463,10 +463,10 @@
       "latest_release_date": "2024-11-21T08:06:28.568669Z",
       "downloads": {
         "lifetime": 9000,
-        "year_2026": 588,
-        "year_2026_with_mirrors": 1591,
+        "year_2026": 591,
+        "year_2026_with_mirrors": 1612,
         "last_month": 66,
-        "last_week": 2,
+        "last_week": 5,
         "last_day": 0
       },
       "test_result": {
@@ -511,10 +511,10 @@
       "latest_release_date": "2024-06-28T14:56:29.573971Z",
       "downloads": {
         "lifetime": 2000,
-        "year_2026": 109,
-        "year_2026_with_mirrors": 352,
+        "year_2026": 112,
+        "year_2026_with_mirrors": 358,
         "last_month": 13,
-        "last_week": 2,
+        "last_week": 4,
         "last_day": 0
       },
       "test_result": {

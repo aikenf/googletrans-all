@@ -69,7 +69,9 @@ googletrans-all/
 ├── scripts/
 │   ├── sync_dashboard_data.py        # Synchronizer for test and stats datasets
 │   └── dev.sh                        # Development helper script
-├── requirements-harness.txt          # Runner dependencies
+├── requirements.txt                  # Core harness dependencies
+├── requirements-harness.txt          # Runner dependencies (references requirements.txt)
+├── tests/                            # Test suite for harness and configuration integrity
 ├── AGENTS.md                         # Agentic guide and instructions
 └── README.md                         # Repository documentation
 ```
@@ -77,6 +79,16 @@ googletrans-all/
 ---
 
 ## 🚀 Quickstart & Commands
+
+### Setup
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# Run harness unit tests
+pytest tests/ -v
+```
 
 ### 1. Collect Telemetry
 ```bash
