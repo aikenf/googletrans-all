@@ -1,27 +1,48 @@
 #!/usr/bin/env python3
 """
 sync_dashboard_data.py
-Merges data/packages.json, data/stats.json, and data/matrix_results.json
-into:
+Merges data/packages.json, data/stats.json, data/matrix_results.json,
+and data/history.db into:
 - data/latest_results.json
+- data/runs_history.json
 - dashboard/public/results.json
-Produces a clean unified schema for the Vite dashboard and for agent consumption.
+- dashboard/public/history.json
+
+Produces a unified schema with historical reliability metrics
+for the Vite dashboard and for agent consumption.
 """
 
 import json
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
+import sys
+
+# Ensure project root is in sys.path
+BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+from runner.history_db import (
+    DEFAULT_DB_PATH,
+    DEFAULT_HISTORY_JSON,
+    init_db,
+    record_matrix_run,
+    get_all_runs,
+    get_package_history_data,
+    generate_full_history_export,
+    backfill_known_git_runs
+)
 
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(levelname)s: %(message)s")
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 PACKAGES_FILE = BASE_DIR / "data" / "packages.json"
 STATS_FILE = BASE_DIR / "data" / "stats.json"
 MATRIX_FILE = BASE_DIR / "data" / "matrix_results.json"
 
 LATEST_RESULTS_DATA = BASE_DIR / "data" / "latest_results.json"
 DASHBOARD_PUBLIC_RESULTS = BASE_DIR / "dashboard" / "public" / "results.json"
+DASHBOARD_PUBLIC_HISTORY = BASE_DIR / "dashboard" / "public" / "history.json"
 
 
 def sync():
@@ -42,6 +63,25 @@ def sync():
         with open(MATRIX_FILE, "r", encoding="utf-8") as f:
             matrix = json.load(f)
 
+    # 1. Initialize and maintain historical database
+    init_db()
+    existing_runs = get_all_runs()
+    if len(existing_runs) < 2:
+        logging.info("Backfilling historical runs from git history...")
+        backfill_known_git_runs()
+
+    # Record current matrix run if results present
+    if matrix.get("results"):
+        record_matrix_run(matrix, source="matrix_results_sync")
+
+    # Generate full history export
+    history_export = generate_full_history_export()
+
+    # Also write history to dashboard/public/history.json
+    DASHBOARD_PUBLIC_HISTORY.parent.mkdir(parents=True, exist_ok=True)
+    with open(DASHBOARD_PUBLIC_HISTORY, "w", encoding="utf-8") as f:
+        json.dump(history_export, f, indent=2)
+
     now_iso = datetime.now(timezone.utc).isoformat()
     package_reports = []
 
@@ -50,6 +90,12 @@ def sync():
     total_lifetime_dl = 0
     total_2026_dl = 0
     total_last_month_dl = 0
+
+    stable_count = 0
+    regressed_count = 0
+    recovered_count = 0
+
+    all_runs = get_all_runs()
 
     for pkg in packages:
         name = pkg["pypi_name"]
@@ -69,6 +115,16 @@ def sync():
         total_lifetime_dl += lifetime_dl
         total_2026_dl += d_2026
         total_last_month_dl += d_month
+
+        # Retrieve package historical tracking
+        pkg_hist_data = get_package_history_data(name)
+        trend = pkg_hist_data.get("trend", "stable")
+        if trend == "stable":
+            stable_count += 1
+        elif trend == "regressed":
+            regressed_count += 1
+        elif trend == "recovered":
+            recovered_count += 1
 
         item = {
             "id": pkg["id"],
@@ -95,7 +151,16 @@ def sync():
                 "elapsed_sec": test_res.get("elapsed_sec"),
                 "error_summary": test_res.get("error_summary"),
                 "tests": test_res.get("tests", {})
-            }
+            },
+            "reliability": {
+                "percentage": pkg_hist_data.get("reliability_percentage", 0.0),
+                "total_runs": pkg_hist_data.get("total_runs", 0),
+                "passed_runs": pkg_hist_data.get("passed_runs", 0),
+                "failed_runs": pkg_hist_data.get("failed_runs", 0),
+                "trend": trend,
+                "avg_latency_ms": pkg_hist_data.get("avg_latency_ms")
+            },
+            "history": pkg_hist_data.get("history", [])
         }
         package_reports.append(item)
 
@@ -125,8 +190,15 @@ def sync():
             "pass_rate": round((passed_count / len(packages) * 100), 1) if packages else 0,
             "total_downloads_lifetime": total_lifetime_dl,
             "total_downloads_2026": total_2026_dl,
-            "total_downloads_last_month": total_last_month_dl
+            "total_downloads_last_month": total_last_month_dl,
+            "total_historical_runs": len(all_runs),
+            "trend_summary": {
+                "stable": stable_count,
+                "regressed": regressed_count,
+                "recovered": recovered_count
+            }
         },
+        "runs_history": all_runs,
         "packages": package_reports
     }
 
@@ -141,12 +213,13 @@ def sync():
         json.dump(combined_payload, f, indent=2)
 
     logging.info(
-        "Synchronized results to %s and %s (%d packages, %d passed, %d failed)",
+        "Synchronized results to %s, %s, and history files (%d packages, %d passed, %d failed, %d historical runs)",
         LATEST_RESULTS_DATA,
         DASHBOARD_PUBLIC_RESULTS,
         len(packages),
         passed_count,
-        failed_count
+        failed_count,
+        len(all_runs)
     )
 
 

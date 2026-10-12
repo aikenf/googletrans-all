@@ -50,10 +50,13 @@ googletrans-all/
 │       └── deploy-pages.yml          # GitHub Pages Vite deployment on push
 ├── data/
 │   ├── packages.json                 # Single source of truth for the 11 packages
+│   ├── history.db                    # SQLite historical test runs database
+│   ├── runs_history.json             # Historical test runs JSON export
 │   ├── stats.json                    # Raw telemetry data (PyPI, pypistats, pepy)
 │   ├── matrix_results.json           # Raw harness test results
 │   └── latest_results.json           # Combined dataset consumed by agents & dashboard
 ├── runner/
+│   ├── history_db.py                 # SQLite test run recorder and analytics engine
 │   ├── fetch_stats.py                # Telemetry collector
 │   ├── run_matrix.py                 # Multi-target isolated test executor
 │   └── test_single_target.py         # Sub-process test runner for a single target

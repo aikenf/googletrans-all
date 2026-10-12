@@ -38,8 +38,11 @@ googletrans-all/
 │       └── deploy-pages.yml          # GitHub Pages Vite dashboard deployment
 ├── data/
 │   ├── packages.json                 # Definition and config for all 11 packages
+│   ├── history.db                    # SQLite historical test runs database
+│   ├── runs_history.json             # Structured multi-run history export
 │   └── latest_results.json           # Cached test results & download telemetry
 ├── runner/
+│   ├── history_db.py                 # SQLite test run recorder and analytics engine
 │   ├── fetch_stats.py                # Telemetry collector (PyPI, pypistats.org, pepy.tech)
 │   ├── run_matrix.py                 # Multi-package test executor (runs test suite per package)
 │   └── test_single_target.py         # Sub-process test runner for an individual package

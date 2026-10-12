@@ -165,6 +165,14 @@ def run_matrix(package_filter=None):
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
 
+    # Record in historical test runs database
+    try:
+        from runner.history_db import record_matrix_run
+        record_matrix_run(payload)
+        logging.info("Recorded matrix run in historical test database.")
+    except Exception as db_err:
+        logging.warning("Could not record matrix run to history database: %s", db_err)
+
     logging.info("Matrix test run finished. Passed: %d/%d. Saved to %s", summary["passed"], summary["total"], OUTPUT_FILE)
     return payload
 

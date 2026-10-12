@@ -39,50 +39,121 @@
           <div class="card skeleton"></div>
         </section>
 
-        <!-- Controls: Filter & Search -->
-        <section class="controls-bar">
-          <div class="search-box">
-            <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" />
-            </svg>
-            <input type="text" id="package-search" placeholder="Filter packages by name, API type, or keyword..." />
-          </div>
-          <div class="filter-pills" id="filter-pills">
-            <button class="pill active" data-filter="all">All (11)</button>
-            <button class="pill" data-filter="passed">Working Only</button>
-            <button class="pill" data-filter="failed">Failing Only</button>
-            <button class="pill" data-filter="async">Async API</button>
-            <button class="pill" data-filter="sync">Sync API</button>
+        <!-- View Switcher -->
+        <section class="view-switcher-bar">
+          <div class="view-tabs" id="view-tabs">
+            <button class="view-tab active" data-view="matrix">
+              <span class="tab-icon">📊</span> Current Test Matrix
+            </button>
+            <button class="view-tab" data-view="history">
+              <span class="tab-icon">📈</span> Previous Runs & Heatmap
+              <span class="tab-badge" id="runs-count-badge">Tracked</span>
+            </button>
           </div>
         </section>
 
-        <!-- Table View -->
-        <section class="table-card">
-          <div class="table-header-row">
-            <h2>Package Implementations & Telemetry</h2>
-            <span class="refresh-indicator" id="timestamp-indicator">Loading...</span>
-          </div>
-          <div class="table-responsive">
-            <table class="data-table" id="packages-table">
-              <thead>
-                <tr>
-                  <th>Status</th>
-                  <th>PyPI Package</th>
-                  <th>Latest Release</th>
-                  <th>API Style</th>
-                  <th>Lifetime DL <span class="th-src">(pepy)</span></th>
-                  <th>2026 DL <span class="th-src">(pypistats)</span></th>
-                  <th>Last Month <span class="th-src">(pypistats)</span></th>
-                  <th>Latency</th>
-                  <th>Details</th>
-                </tr>
-              </thead>
-              <tbody id="packages-table-body">
-                <tr><td colspan="9" class="loading-cell">Loading test results and telemetry...</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+        <!-- View 1: Current Matrix View -->
+        <div id="view-matrix-container">
+          <!-- Controls: Filter & Search -->
+          <section class="controls-bar">
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" />
+              </svg>
+              <input type="text" id="package-search" placeholder="Filter packages by name, API type, or keyword..." />
+            </div>
+            <div class="filter-pills" id="filter-pills">
+              <button class="pill active" data-filter="all">All (11)</button>
+              <button class="pill" data-filter="passed">Working Only</button>
+              <button class="pill" data-filter="failed">Failing Only</button>
+              <button class="pill" data-filter="async">Async API</button>
+              <button class="pill" data-filter="sync">Sync API</button>
+            </div>
+          </section>
+
+          <!-- Table View -->
+          <section class="table-card">
+            <div class="table-header-row">
+              <h2>Package Implementations & Telemetry</h2>
+              <span class="refresh-indicator" id="timestamp-indicator">Loading...</span>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table" id="packages-table">
+                <thead>
+                  <tr>
+                    <th>Status</th>
+                    <th>PyPI Package</th>
+                    <th>Reliability</th>
+                    <th>Latest Release</th>
+                    <th>API Style</th>
+                    <th>Lifetime DL <span class="th-src">(pepy)</span></th>
+                    <th>2026 DL <span class="th-src">(pypistats)</span></th>
+                    <th>Last Month <span class="th-src">(pypistats)</span></th>
+                    <th>Latency</th>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody id="packages-table-body">
+                  <tr><td colspan="10" class="loading-cell">Loading test results and telemetry...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <!-- View 2: Historical Runs View (Dedicated previous runs view) -->
+        <div id="view-history-container" class="hidden">
+          <section class="table-card">
+            <div class="table-header-row">
+              <div>
+                <h2>Historical Run Matrix & Comparison</h2>
+                <p class="section-desc">Track changes across test executions. Highlights state regressions, recoveries, and time-dependent reliability.</p>
+              </div>
+              <span class="refresh-indicator" id="history-runs-indicator">Loading runs...</span>
+            </div>
+
+            <!-- Run summary banner -->
+            <div class="history-runs-banner" id="history-runs-banner"></div>
+
+            <!-- 30-Day SLA Tick Bar Overview (Statuspage style) -->
+            <div style="margin-bottom: 2rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <h3 style="font-size: 1.05rem; font-weight: 700;">30-Day Implementation Health (Statuspage SLA Bars)</h3>
+                <span class="refresh-indicator">30 discrete daily slots</span>
+              </div>
+              <div id="sla-overview-container" class="sla-overview-grid">
+                <!-- Rendered by JS -->
+              </div>
+            </div>
+
+            <!-- Runs Heatmap Matrix -->
+            <div class="table-responsive">
+              <table class="data-table history-table" id="history-matrix-table">
+                <thead id="history-table-head">
+                  <tr>
+                    <th>Package</th>
+                    <th>Reliability</th>
+                    <th>Loading runs...</th>
+                  </tr>
+                </thead>
+                <tbody id="history-table-body">
+                  <tr><td colspan="4" class="loading-cell">Loading historical runs...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Reliability Breakdown & Analysis Card -->
+          <section class="table-card" style="margin-top: 1.5rem;">
+            <div class="table-header-row">
+              <h2>Package Reliability Ranking</h2>
+              <span class="refresh-indicator">All tracked test executions</span>
+            </div>
+            <div id="reliability-ranking-container" class="ranking-grid">
+              <!-- Rendered by JS -->
+            </div>
+          </section>
+        </div>
 
         <!-- Detail Modal / Drawer -->
         <div id="modal-container" class="modal-backdrop hidden">
@@ -96,7 +167,7 @@
       <footer class="site-footer">
         <div class="container footer-content">
           <p>
-            Automated test matrix powered by GitHub Actions. Data sources:
+            Automated test matrix powered by GitHub Actions & SQLite telemetry. Data sources:
             <a href="https://pypi.org/" target="_blank" rel="noopener">PyPI</a>,
             <a href="https://pypistats.org/" target="_blank" rel="noopener">pypistats.org</a>, and
             <a href="https://pepy.tech/" target="_blank" rel="noopener">pepy.tech</a>.
