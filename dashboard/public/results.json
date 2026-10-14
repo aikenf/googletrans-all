@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T05:25:12.977253+00:00",
+  "generated_at": "2026-10-14T12:58:39.740760+00:00",
   "metadata": {
     "title": "Googletrans Implementations & Forks Live Matrix",
     "repository": "https://github.com/aikenf/googletrans-all",
@@ -16,7 +16,7 @@
     "total_downloads_lifetime": 100151701,
     "total_downloads_2026": 19902370,
     "total_downloads_last_month": 1853727,
-    "total_historical_runs": 5,
+    "total_historical_runs": 4,
     "trend_summary": {
       "stable": 11,
       "regressed": 0,
@@ -40,15 +40,6 @@
       "passed_count": 5,
       "failed_count": 6,
       "pass_rate": 45.5,
-      "source": "matrix_results_sync"
-    },
-    {
-      "run_id": "run_2026-10-12T12-44-08_861307+00-00",
-      "timestamp": "2026-10-12T12:44:08.861307+00:00",
-      "total_packages": 1,
-      "passed_count": 1,
-      "failed_count": 0,
-      "pass_rate": 100.0,
       "source": "matrix_results_sync"
     },
     {
@@ -848,11 +839,11 @@
       },
       "reliability": {
         "percentage": 100.0,
-        "total_runs": 5,
-        "passed_runs": 5,
+        "total_runs": 4,
+        "passed_runs": 4,
         "failed_runs": 0,
         "trend": "stable",
-        "avg_latency_ms": 491.5
+        "avg_latency_ms": 586.5
       },
       "history": [
         {
@@ -912,37 +903,6 @@
             "detect_language": {
               "status": "passed",
               "latency_ms": 58.2,
-              "result": "fr",
-              "error": null
-            }
-          }
-        },
-        {
-          "run_id": "run_2026-10-12T12-44-08_861307+00-00",
-          "timestamp": "2026-10-12T12:44:08.861307+00:00",
-          "status": "passed",
-          "version": "4.1.0",
-          "api_type": "async",
-          "latency_ms": 111.22,
-          "error_summary": null,
-          "tests": {
-            "packaging": {
-              "status": "passed",
-              "details": "Installed version 4.1.0"
-            },
-            "import": {
-              "status": "passed",
-              "details": "Imported googletrans (version: 4.1.0)"
-            },
-            "translate_en_de": {
-              "status": "passed",
-              "latency_ms": 111.22,
-              "result": "Hallo Welt",
-              "error": null
-            },
-            "detect_language": {
-              "status": "passed",
-              "latency_ms": 29.94,
               "result": "fr",
               "error": null
             }
