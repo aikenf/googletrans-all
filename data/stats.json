@@ -10,12 +10,12 @@
     "summary": "An unofficial Google Translate API for Python",
     "author": null,
     "downloads_lifetime": 99000000,
-    "downloads_2026": 20512691,
-    "downloads_2026_with_mirrors": 20522182,
+    "downloads_2026": 20654205,
+    "downloads_2026_with_mirrors": 20663776,
     "downloads_last_month": 1748758,
-    "downloads_last_week": 699882,
-    "downloads_last_day": 99100,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_week": 692436,
+    "downloads_last_day": 141514,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "googletrans-curl": {
     "package_id": "googletrans-curl",
@@ -27,13 +27,13 @@
     "latest_release_date": "2026-10-08T01:45:02.157705Z",
     "summary": "A drop-in replacement for googletrans using curl-cffi to prevent HTTP 429 rate limits",
     "author": null,
-    "downloads_lifetime": 989,
-    "downloads_2026": 438,
-    "downloads_2026_with_mirrors": 1038,
+    "downloads_lifetime": 1000,
+    "downloads_2026": 457,
+    "downloads_2026_with_mirrors": 1063,
     "downloads_last_month": 0,
-    "downloads_last_week": 112,
-    "downloads_last_day": 24,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_week": 115,
+    "downloads_last_day": 19,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "googletrans-py": {
     "package_id": "googletrans-py",
@@ -46,12 +46,12 @@
     "summary": "Free Google Translate API for Python. Translates totally free of charge.",
     "author": "StarkProgrammer",
     "downloads_lifetime": 2000000,
-    "downloads_2026": 528983,
-    "downloads_2026_with_mirrors": 529815,
+    "downloads_2026": 530805,
+    "downloads_2026_with_mirrors": 531642,
     "downloads_last_month": 102950,
-    "downloads_last_week": 18266,
-    "downloads_last_day": 880,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_week": 16559,
+    "downloads_last_day": 1822,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "googletrans-py39": {
     "package_id": "googletrans-py39",
@@ -64,12 +64,12 @@
     "summary": "Free Google Translate API for Python. Translates totally free of charge.",
     "author": "Coykto",
     "downloads_lifetime": 23000,
-    "downloads_2026": 4818,
-    "downloads_2026_with_mirrors": 5234,
+    "downloads_2026": 4838,
+    "downloads_2026_with_mirrors": 5254,
     "downloads_last_month": 791,
-    "downloads_last_week": 122,
-    "downloads_last_day": 4,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_week": 126,
+    "downloads_last_day": 20,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "googletrans-python": {
     "package_id": "googletrans-python",
@@ -82,12 +82,12 @@
     "summary": "googletrans-python package.",
     "author": "leeyunjai",
     "downloads_lifetime": 11000,
-    "downloads_2026": 1179,
-    "downloads_2026_with_mirrors": 1597,
+    "downloads_2026": 1180,
+    "downloads_2026_with_mirrors": 1598,
     "downloads_last_month": 89,
-    "downloads_last_week": 36,
-    "downloads_last_day": 4,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_week": 33,
+    "downloads_last_day": 1,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "googletrans-sw": {
     "package_id": "googletrans-sw",
@@ -100,12 +100,12 @@
     "summary": "Free Google Translate API for Python. Translates totally free of charge.",
     "author": "Skywind5487",
     "downloads_lifetime": 4000,
-    "downloads_2026": 149,
-    "downloads_2026_with_mirrors": 648,
+    "downloads_2026": 150,
+    "downloads_2026_with_mirrors": 649,
     "downloads_last_month": 14,
-    "downloads_last_week": 9,
+    "downloads_last_week": 8,
     "downloads_last_day": 1,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "googletrans-wheel": {
     "package_id": "googletrans-wheel",
@@ -118,12 +118,12 @@
     "summary": "Free Google Translate API for Python. Translates totally free of charge.",
     "author": "SuHun Han",
     "downloads_lifetime": 2000,
-    "downloads_2026": 126,
-    "downloads_2026_with_mirrors": 395,
+    "downloads_2026": 127,
+    "downloads_2026_with_mirrors": 396,
     "downloads_last_month": 13,
-    "downloads_last_week": 9,
-    "downloads_last_day": 0,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_week": 8,
+    "downloads_last_day": 1,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "googletrans-di": {
     "package_id": "googletrans-di",
@@ -136,12 +136,12 @@
     "summary": "Free Google Translate API for Python. Translates totally free of charge.",
     "author": null,
     "downloads_lifetime": 10000,
-    "downloads_2026": 1190,
-    "downloads_2026_with_mirrors": 2298,
+    "downloads_2026": 1500,
+    "downloads_2026_with_mirrors": 2608,
     "downloads_last_month": 66,
-    "downloads_last_week": 285,
-    "downloads_last_day": 2,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_week": 592,
+    "downloads_last_day": 310,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "googletrans-modified": {
     "package_id": "googletrans-modified",
@@ -154,12 +154,12 @@
     "summary": "Free Google Translate API for Python. Translates totally free of charge.",
     "author": "Hayk Serobyan",
     "downloads_lifetime": 15000,
-    "downloads_2026": 1879,
-    "downloads_2026_with_mirrors": 2304,
+    "downloads_2026": 1881,
+    "downloads_2026_with_mirrors": 2306,
     "downloads_last_month": 23,
-    "downloads_last_week": 13,
-    "downloads_last_day": 1,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_week": 12,
+    "downloads_last_day": 2,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "py-googletrans": {
     "package_id": "py-googletrans",
@@ -172,12 +172,12 @@
     "summary": "An unofficial Google Translate API for Python",
     "author": null,
     "downloads_lifetime": 85000,
-    "downloads_2026": 11302,
-    "downloads_2026_with_mirrors": 12043,
+    "downloads_2026": 11339,
+    "downloads_2026_with_mirrors": 12080,
     "downloads_last_month": 1013,
-    "downloads_last_week": 820,
-    "downloads_last_day": 86,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_week": 701,
+    "downloads_last_day": 37,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   },
   "googletrans-wheel2-py": {
     "package_id": "googletrans-wheel2-py",
@@ -190,11 +190,11 @@
     "summary": "Free Google Translate API for Python. Translates totally free of charge.",
     "author": "StarkProgrammer",
     "downloads_lifetime": 3000,
-    "downloads_2026": 139,
-    "downloads_2026_with_mirrors": 403,
+    "downloads_2026": 141,
+    "downloads_2026_with_mirrors": 405,
     "downloads_last_month": 10,
     "downloads_last_week": 9,
-    "downloads_last_day": 1,
-    "fetched_at": "2026-10-26T05:26:34.110931+00:00"
+    "downloads_last_day": 2,
+    "fetched_at": "2026-10-27T05:26:24.292807+00:00"
   }
 }

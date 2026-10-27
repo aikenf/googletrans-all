@@ -1,14 +1,14 @@
 {
   "summary": {
     "total": 11,
-    "passed": 7,
-    "failed": 4,
-    "timestamp": "2026-10-26T05:26:50.327240+00:00"
+    "passed": 5,
+    "failed": 6,
+    "timestamp": "2026-10-27T05:26:40.707097+00:00"
   },
   "results": {
     "googletrans": {
       "package_name": "googletrans",
-      "timestamp": "2026-10-26T05:26:55Z",
+      "timestamp": "2026-10-27T05:26:46Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": true,
@@ -24,29 +24,29 @@
           "details": "Imported googletrans (version: 3.4.0)"
         },
         "translate_en_de": {
-          "status": "passed",
-          "latency_ms": 101.21,
-          "result": "Hallo Welt",
-          "error": null
+          "status": "failed",
+          "latency_ms": 297.74,
+          "result": "Hello world",
+          "error": "Untranslated echo output: 'Hello world'"
         },
         "detect_language": {
           "status": "passed",
-          "latency_ms": 177.28,
-          "result": "fr",
+          "latency_ms": 212.09,
+          "result": "en",
           "error": null
         }
       },
-      "overall_status": "passed",
-      "error_summary": null,
+      "overall_status": "failed",
+      "error_summary": "Untranslated echo output: 'Hello world'",
       "installed_version": "4.0.2",
-      "elapsed_sec": 6.09,
+      "elapsed_sec": 6.87,
       "package_id": "googletrans",
       "description": "The original and most widespread unofficial Google Translate API library.",
       "pypi_url": "https://pypi.org/project/googletrans/"
     },
     "googletrans-curl": {
       "package_name": "googletrans-curl",
-      "timestamp": "2026-10-26T05:27:02Z",
+      "timestamp": "2026-10-27T05:26:53Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": true,
@@ -63,13 +63,13 @@
         },
         "translate_en_de": {
           "status": "passed",
-          "latency_ms": 43.88,
+          "latency_ms": 64.22,
           "result": "Hallo Welt",
           "error": null
         },
         "detect_language": {
           "status": "passed",
-          "latency_ms": 27.69,
+          "latency_ms": 128.6,
           "result": "fr",
           "error": null
         }
@@ -77,14 +77,14 @@
       "overall_status": "passed",
       "error_summary": null,
       "installed_version": "4.1.0",
-      "elapsed_sec": 6.61,
+      "elapsed_sec": 5.93,
       "package_id": "googletrans-curl",
       "description": "Modern fork utilizing curl-cffi and httpx[http2] for enhanced bypass and stability.",
       "pypi_url": "https://pypi.org/project/googletrans-curl/"
     },
     "googletrans-py": {
       "package_name": "googletrans-py",
-      "timestamp": "2026-10-26T05:27:08Z",
+      "timestamp": "2026-10-27T05:26:58Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": true,
@@ -101,13 +101,13 @@
         },
         "translate_en_de": {
           "status": "passed",
-          "latency_ms": 1997.35,
+          "latency_ms": 301.68,
           "result": "Hallo Welt",
           "error": null
         },
         "detect_language": {
           "status": "passed",
-          "latency_ms": 184.23,
+          "latency_ms": 877.45,
           "result": "fr",
           "error": null
         }
@@ -115,14 +115,14 @@
       "overall_status": "passed",
       "error_summary": null,
       "installed_version": "4.0.0",
-      "elapsed_sec": 7.82,
+      "elapsed_sec": 6.08,
       "package_id": "googletrans-py",
       "description": "Fork packaging synchronous 4.0.0 API.",
       "pypi_url": "https://pypi.org/project/googletrans-py/"
     },
     "googletrans-py39": {
       "package_name": "googletrans-py39",
-      "timestamp": "2026-10-26T05:27:16Z",
+      "timestamp": "2026-10-27T05:27:04Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": true,
@@ -139,13 +139,13 @@
         },
         "translate_en_de": {
           "status": "passed",
-          "latency_ms": 1142.64,
+          "latency_ms": 120.25,
           "result": "Hallo Welt",
           "error": null
         },
         "detect_language": {
           "status": "passed",
-          "latency_ms": 130.73,
+          "latency_ms": 92.2,
           "result": "fr",
           "error": null
         }
@@ -153,14 +153,14 @@
       "overall_status": "passed",
       "error_summary": null,
       "installed_version": "4.0.2",
-      "elapsed_sec": 6.89,
+      "elapsed_sec": 5.1,
       "package_id": "googletrans-py39",
       "description": "Python 3.9 compatibility fork.",
       "pypi_url": "https://pypi.org/project/googletrans-py39/"
     },
     "googletrans-python": {
       "package_name": "googletrans-python",
-      "timestamp": "2026-10-26T05:27:22Z",
+      "timestamp": "2026-10-27T05:27:08Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": true,
@@ -177,7 +177,7 @@
         },
         "translate_en_de": {
           "status": "failed",
-          "latency_ms": 320.55,
+          "latency_ms": 338.06,
           "result": null,
           "error": "HTTPError: HTTP Error 429: Too Many Requests"
         },
@@ -192,14 +192,14 @@
       "overall_status": "failed",
       "error_summary": "HTTPError: HTTP Error 429: Too Many Requests",
       "installed_version": "0.2.0",
-      "elapsed_sec": 5.31,
+      "elapsed_sec": 4.67,
       "package_id": "googletrans-python",
       "description": "Alternative wrapper providing direct translate() function.",
       "pypi_url": "https://pypi.org/project/googletrans-python/"
     },
     "googletrans-sw": {
       "package_name": "googletrans-sw",
-      "timestamp": "2026-10-26T05:27:28Z",
+      "timestamp": "2026-10-27T05:27:14Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": true,
@@ -216,13 +216,13 @@
         },
         "translate_en_de": {
           "status": "passed",
-          "latency_ms": 478.72,
+          "latency_ms": 65.76,
           "result": "Hallo Welt",
           "error": null
         },
         "detect_language": {
           "status": "passed",
-          "latency_ms": 1021.12,
+          "latency_ms": 87.05,
           "result": "fr",
           "error": null
         }
@@ -230,14 +230,14 @@
       "overall_status": "passed",
       "error_summary": null,
       "installed_version": "4.0.1",
-      "elapsed_sec": 7.1,
+      "elapsed_sec": 5.05,
       "package_id": "googletrans-sw",
       "description": "Swahili / customized distribution fork.",
       "pypi_url": "https://pypi.org/project/googletrans-sw/"
     },
     "googletrans-wheel": {
       "package_name": "googletrans-wheel",
-      "timestamp": "2026-10-26T05:27:35Z",
+      "timestamp": "2026-10-27T05:27:19Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": true,
@@ -254,13 +254,13 @@
         },
         "translate_en_de": {
           "status": "failed",
-          "latency_ms": 235.21,
+          "latency_ms": 293.69,
           "result": null,
           "error": "AttributeError: 'NoneType' object has no attribute 'group'"
         },
         "detect_language": {
           "status": "failed",
-          "latency_ms": 256.86,
+          "latency_ms": 206.76,
           "result": null,
           "error": "AttributeError: 'NoneType' object has no attribute 'group'"
         }
@@ -268,14 +268,14 @@
       "overall_status": "failed",
       "error_summary": "AttributeError: 'NoneType' object has no attribute 'group'",
       "installed_version": "3.0.0",
-      "elapsed_sec": 6.36,
+      "elapsed_sec": 5.52,
       "package_id": "googletrans-wheel",
       "description": "Binary wheel build with googletrans_wheel module namespace.",
       "pypi_url": "https://pypi.org/project/googletrans-wheel/"
     },
     "googletrans-di": {
       "package_name": "googletrans-di",
-      "timestamp": "2026-10-26T05:27:41Z",
+      "timestamp": "2026-10-27T05:27:24Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": false,
@@ -306,14 +306,14 @@
       "overall_status": "failed",
       "error_summary": "Failed to import candidate modules: googletrans_di: No module named 'httpcore' | googletrans: No module named 'googletrans'",
       "installed_version": "4.0.2",
-      "elapsed_sec": 4.88,
+      "elapsed_sec": 4.32,
       "package_id": "googletrans-di",
       "description": "Fork using googletrans_di namespace.",
       "pypi_url": "https://pypi.org/project/googletrans-di/"
     },
     "googletrans-modified": {
       "package_name": "googletrans-modified",
-      "timestamp": "2026-10-26T05:27:46Z",
+      "timestamp": "2026-10-27T05:27:29Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": true,
@@ -329,29 +329,29 @@
           "details": "Imported googletrans (version: 1.1.1)"
         },
         "translate_en_de": {
-          "status": "passed",
-          "latency_ms": 38.78,
-          "result": "Hallo Welt",
-          "error": null
+          "status": "failed",
+          "latency_ms": 423.65,
+          "result": "Hello world",
+          "error": "Untranslated echo output: 'Hello world'"
         },
         "detect_language": {
           "status": "passed",
-          "latency_ms": 701.03,
-          "result": "fr",
+          "latency_ms": 503.08,
+          "result": "en",
           "error": null
         }
       },
-      "overall_status": "passed",
-      "error_summary": null,
+      "overall_status": "failed",
+      "error_summary": "Untranslated echo output: 'Hello world'",
       "installed_version": "1.1.1",
-      "elapsed_sec": 6.33,
+      "elapsed_sec": 5.8,
       "package_id": "googletrans-modified",
       "description": "Modified release with adjusted query handling.",
       "pypi_url": "https://pypi.org/project/googletrans-modified/"
     },
     "py-googletrans": {
       "package_name": "py-googletrans",
-      "timestamp": "2026-10-26T05:27:53Z",
+      "timestamp": "2026-10-27T05:27:34Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": false,
@@ -364,7 +364,7 @@
         },
         "import": {
           "status": "failed",
-          "details": "googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_lqkiy06m/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'"
+          "details": "googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_ysok58yj/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'"
         },
         "translate_en_de": {
           "status": "pending",
@@ -380,16 +380,16 @@
         }
       },
       "overall_status": "failed",
-      "error_summary": "Failed to import candidate modules: googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_lqkiy06m/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'",
+      "error_summary": "Failed to import candidate modules: googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_ysok58yj/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'",
       "installed_version": "4.0.0",
-      "elapsed_sec": 5.56,
+      "elapsed_sec": 4.8,
       "package_id": "py-googletrans",
       "description": "PyPI release published under original py-googletrans repository name.",
       "pypi_url": "https://pypi.org/project/py-googletrans/"
     },
     "googletrans-wheel2-py": {
       "package_name": "googletrans-wheel2-py",
-      "timestamp": "2026-10-26T05:27:58Z",
+      "timestamp": "2026-10-27T05:27:39Z",
       "python_version": "3.12.15",
       "installed": true,
       "import_success": true,
@@ -406,13 +406,13 @@
         },
         "translate_en_de": {
           "status": "passed",
-          "latency_ms": 184.98,
+          "latency_ms": 67.82,
           "result": "Hallo Welt",
           "error": null
         },
         "detect_language": {
           "status": "passed",
-          "latency_ms": 994.04,
+          "latency_ms": 74.17,
           "result": "fr",
           "error": null
         }
@@ -420,7 +420,7 @@
       "overall_status": "passed",
       "error_summary": null,
       "installed_version": "4.0.0",
-      "elapsed_sec": 6.83,
+      "elapsed_sec": 5.02,
       "package_id": "googletrans-wheel2-py",
       "description": "Wheel repackage fork targeting modern python versions.",
       "pypi_url": "https://pypi.org/project/googletrans-wheel2-py/"
