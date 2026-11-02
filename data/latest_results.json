@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T05:39:38.065166+00:00",
+  "generated_at": "2026-11-02T05:54:01.253921+00:00",
   "metadata": {
     "title": "Googletrans Implementations & Forks Live Matrix",
     "repository": "https://github.com/aikenf/googletrans-all",
@@ -13,10 +13,10 @@
     "passed": 5,
     "failed": 6,
     "pass_rate": 45.5,
-    "total_downloads_lifetime": 102156000,
-    "total_downloads_2026": 21700187,
+    "total_downloads_lifetime": 102157000,
+    "total_downloads_2026": 21814046,
     "total_downloads_last_month": 1853727,
-    "total_historical_runs": 22,
+    "total_historical_runs": 23,
     "trend_summary": {
       "stable": 11,
       "regressed": 0,
@@ -221,6 +221,15 @@
       "failed_count": 6,
       "pass_rate": 45.5,
       "source": "matrix_results_sync"
+    },
+    {
+      "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+      "timestamp": "2026-11-02T05:53:09.264033+00:00",
+      "total_packages": 11,
+      "passed_count": 5,
+      "failed_count": 6,
+      "pass_rate": 45.5,
+      "source": "matrix_results_sync"
     }
   ],
   "packages": [
@@ -236,17 +245,17 @@
       "latest_release_date": "2022-04-13T14:48:07.745362Z",
       "downloads": {
         "lifetime": 2000000,
-        "year_2026": 539378,
-        "year_2026_with_mirrors": 540250,
+        "year_2026": 540179,
+        "year_2026_with_mirrors": 541054,
         "last_month": 102950,
         "last_week": 11275,
-        "last_day": 894
+        "last_day": 801
       },
       "test_result": {
         "status": "passed",
         "api_type": "sync",
         "module_name": "googletrans",
-        "elapsed_sec": 11.02,
+        "elapsed_sec": 4.38,
         "error_summary": null,
         "tests": {
           "packaging": {
@@ -259,25 +268,25 @@
           },
           "translate_en_de": {
             "status": "passed",
-            "latency_ms": 1233.0,
+            "latency_ms": 317.51,
             "result": "Hallo Welt",
             "error": null
           },
           "detect_language": {
-            "status": "failed",
-            "latency_ms": 5006.13,
-            "result": null,
-            "error": "ReadTimeout: The read operation timed out"
+            "status": "passed",
+            "latency_ms": 139.45,
+            "result": "fr",
+            "error": null
           }
         }
       },
       "reliability": {
         "percentage": 100.0,
-        "total_runs": 22,
-        "passed_runs": 22,
+        "total_runs": 23,
+        "passed_runs": 23,
         "failed_runs": 0,
         "trend": "stable",
-        "avg_latency_ms": 968.9
+        "avg_latency_ms": 940.6
       },
       "history": [
         {
@@ -961,6 +970,37 @@
               "error": "ReadTimeout: The read operation timed out"
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "passed",
+          "version": "4.0.0",
+          "api_type": "sync",
+          "latency_ms": 317.51,
+          "error_summary": null,
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 4.0.0"
+            },
+            "import": {
+              "status": "passed",
+              "details": "Imported googletrans (version: 4.0.0)"
+            },
+            "translate_en_de": {
+              "status": "passed",
+              "latency_ms": 317.51,
+              "result": "Hallo Welt",
+              "error": null
+            },
+            "detect_language": {
+              "status": "passed",
+              "latency_ms": 139.45,
+              "result": "fr",
+              "error": null
+            }
+          }
         }
       ]
     },
@@ -976,17 +1016,17 @@
       "latest_release_date": "2023-12-04T04:43:56.370356Z",
       "downloads": {
         "lifetime": 24000,
-        "year_2026": 4925,
-        "year_2026_with_mirrors": 5348,
+        "year_2026": 4941,
+        "year_2026_with_mirrors": 5366,
         "last_month": 791,
         "last_week": 111,
-        "last_day": 0
+        "last_day": 16
       },
       "test_result": {
         "status": "passed",
         "api_type": "sync",
         "module_name": "googletrans",
-        "elapsed_sec": 5.62,
+        "elapsed_sec": 5.05,
         "error_summary": null,
         "tests": {
           "packaging": {
@@ -999,25 +1039,25 @@
           },
           "translate_en_de": {
             "status": "passed",
-            "latency_ms": 426.86,
+            "latency_ms": 244.2,
             "result": "Hallo Welt",
             "error": null
           },
           "detect_language": {
             "status": "passed",
-            "latency_ms": 554.42,
+            "latency_ms": 912.15,
             "result": "fr",
             "error": null
           }
         }
       },
       "reliability": {
-        "percentage": 95.5,
-        "total_runs": 22,
-        "passed_runs": 21,
+        "percentage": 95.7,
+        "total_runs": 23,
+        "passed_runs": 22,
         "failed_runs": 1,
         "trend": "stable",
-        "avg_latency_ms": 655.1
+        "avg_latency_ms": 637.3
       },
       "history": [
         {
@@ -1701,6 +1741,37 @@
               "error": null
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "passed",
+          "version": "4.0.2",
+          "api_type": "sync",
+          "latency_ms": 244.2,
+          "error_summary": null,
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 4.0.2"
+            },
+            "import": {
+              "status": "passed",
+              "details": "Imported googletrans (version: 4.0.2)"
+            },
+            "translate_en_de": {
+              "status": "passed",
+              "latency_ms": 244.2,
+              "result": "Hallo Welt",
+              "error": null
+            },
+            "detect_language": {
+              "status": "passed",
+              "latency_ms": 912.15,
+              "result": "fr",
+              "error": null
+            }
+          }
         }
       ]
     },
@@ -1716,17 +1787,17 @@
       "latest_release_date": "2024-06-19T11:46:56.381725Z",
       "downloads": {
         "lifetime": 4000,
-        "year_2026": 152,
-        "year_2026_with_mirrors": 660,
+        "year_2026": 156,
+        "year_2026_with_mirrors": 665,
         "last_month": 14,
         "last_week": 4,
-        "last_day": 0
+        "last_day": 4
       },
       "test_result": {
         "status": "passed",
         "api_type": "sync",
         "module_name": "googletrans",
-        "elapsed_sec": 5.8,
+        "elapsed_sec": 4.9,
         "error_summary": null,
         "tests": {
           "packaging": {
@@ -1739,25 +1810,25 @@
           },
           "translate_en_de": {
             "status": "passed",
-            "latency_ms": 731.83,
+            "latency_ms": 212.78,
             "result": "Hallo Welt",
             "error": null
           },
           "detect_language": {
             "status": "passed",
-            "latency_ms": 428.12,
+            "latency_ms": 858.75,
             "result": "fr",
             "error": null
           }
         }
       },
       "reliability": {
-        "percentage": 95.5,
-        "total_runs": 22,
-        "passed_runs": 21,
+        "percentage": 95.7,
+        "total_runs": 23,
+        "passed_runs": 22,
         "failed_runs": 1,
         "trend": "stable",
-        "avg_latency_ms": 887.0
+        "avg_latency_ms": 857.7
       },
       "history": [
         {
@@ -2441,6 +2512,37 @@
               "error": null
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "passed",
+          "version": "4.0.1",
+          "api_type": "sync",
+          "latency_ms": 212.78,
+          "error_summary": null,
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 4.0.1"
+            },
+            "import": {
+              "status": "passed",
+              "details": "Imported googletrans (version: 4.0.1)"
+            },
+            "translate_en_de": {
+              "status": "passed",
+              "latency_ms": 212.78,
+              "result": "Hallo Welt",
+              "error": null
+            },
+            "detect_language": {
+              "status": "passed",
+              "latency_ms": 858.75,
+              "result": "fr",
+              "error": null
+            }
+          }
         }
       ]
     },
@@ -2456,17 +2558,17 @@
       "latest_release_date": "2024-06-29T13:22:07.412679Z",
       "downloads": {
         "lifetime": 3000,
-        "year_2026": 144,
-        "year_2026_with_mirrors": 413,
+        "year_2026": 146,
+        "year_2026_with_mirrors": 417,
         "last_month": 10,
         "last_week": 6,
-        "last_day": 0
+        "last_day": 2
       },
       "test_result": {
         "status": "passed",
         "api_type": "sync",
         "module_name": "googletrans",
-        "elapsed_sec": 5.81,
+        "elapsed_sec": 5.38,
         "error_summary": null,
         "tests": {
           "packaging": {
@@ -2479,13 +2581,13 @@
           },
           "translate_en_de": {
             "status": "passed",
-            "latency_ms": 433.35,
+            "latency_ms": 1109.41,
             "result": "Hallo Welt",
             "error": null
           },
           "detect_language": {
             "status": "passed",
-            "latency_ms": 586.63,
+            "latency_ms": 390.83,
             "result": "fr",
             "error": null
           }
@@ -2493,11 +2595,11 @@
       },
       "reliability": {
         "percentage": 100.0,
-        "total_runs": 22,
-        "passed_runs": 22,
+        "total_runs": 23,
+        "passed_runs": 23,
         "failed_runs": 0,
         "trend": "stable",
-        "avg_latency_ms": 483.2
+        "avg_latency_ms": 510.5
       },
       "history": [
         {
@@ -3181,6 +3283,37 @@
               "error": null
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "passed",
+          "version": "4.0.0",
+          "api_type": "sync",
+          "latency_ms": 1109.41,
+          "error_summary": null,
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 4.0.0"
+            },
+            "import": {
+              "status": "passed",
+              "details": "Imported googletrans (version: 4.0.0)"
+            },
+            "translate_en_de": {
+              "status": "passed",
+              "latency_ms": 1109.41,
+              "result": "Hallo Welt",
+              "error": null
+            },
+            "detect_language": {
+              "status": "passed",
+              "latency_ms": 390.83,
+              "result": "fr",
+              "error": null
+            }
+          }
         }
       ]
     },
@@ -3196,17 +3329,17 @@
       "latest_release_date": "2026-10-08T01:45:02.157705Z",
       "downloads": {
         "lifetime": 1000,
-        "year_2026": 588,
-        "year_2026_with_mirrors": 1211,
+        "year_2026": 623,
+        "year_2026_with_mirrors": 1251,
         "last_month": 0,
         "last_week": 174,
-        "last_day": 34
+        "last_day": 35
       },
       "test_result": {
         "status": "passed",
         "api_type": "async",
         "module_name": "googletrans",
-        "elapsed_sec": 17.26,
+        "elapsed_sec": 4.66,
         "error_summary": null,
         "tests": {
           "packaging": {
@@ -3219,13 +3352,13 @@
           },
           "translate_en_de": {
             "status": "passed",
-            "latency_ms": 10086.8,
+            "latency_ms": 56.05,
             "result": "Hallo Welt",
             "error": null
           },
           "detect_language": {
             "status": "passed",
-            "latency_ms": 1746.02,
+            "latency_ms": 69.47,
             "result": "fr",
             "error": null
           }
@@ -3233,11 +3366,11 @@
       },
       "reliability": {
         "percentage": 100.0,
-        "total_runs": 22,
-        "passed_runs": 22,
+        "total_runs": 23,
+        "passed_runs": 23,
         "failed_runs": 0,
         "trend": "stable",
-        "avg_latency_ms": 1317.8
+        "avg_latency_ms": 1263.0
       },
       "history": [
         {
@@ -3921,6 +4054,37 @@
               "error": null
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "passed",
+          "version": "4.1.0",
+          "api_type": "async",
+          "latency_ms": 56.05,
+          "error_summary": null,
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 4.1.0"
+            },
+            "import": {
+              "status": "passed",
+              "details": "Imported googletrans (version: 4.1.0)"
+            },
+            "translate_en_de": {
+              "status": "passed",
+              "latency_ms": 56.05,
+              "result": "Hallo Welt",
+              "error": null
+            },
+            "detect_language": {
+              "status": "passed",
+              "latency_ms": 69.47,
+              "result": "fr",
+              "error": null
+            }
+          }
         }
       ]
     },
@@ -3936,17 +4100,17 @@
       "latest_release_date": "2025-01-01T14:12:00.321293Z",
       "downloads": {
         "lifetime": 100000000,
-        "year_2026": 21137928,
-        "year_2026_with_mirrors": 21147899,
+        "year_2026": 21250793,
+        "year_2026_with_mirrors": 21260805,
         "last_month": 1748758,
         "last_week": 724337,
-        "last_day": 78039
+        "last_day": 112865
       },
       "test_result": {
         "status": "failed",
         "api_type": "async",
         "module_name": "googletrans",
-        "elapsed_sec": 5.82,
+        "elapsed_sec": 7.38,
         "error_summary": "Untranslated echo output: 'Hello world'",
         "tests": {
           "packaging": {
@@ -3959,25 +4123,25 @@
           },
           "translate_en_de": {
             "status": "failed",
-            "latency_ms": 376.94,
+            "latency_ms": 439.64,
             "result": "Hello world",
             "error": "Untranslated echo output: 'Hello world'"
           },
           "detect_language": {
             "status": "passed",
-            "latency_ms": 285.44,
+            "latency_ms": 461.56,
             "result": "en",
             "error": null
           }
         }
       },
       "reliability": {
-        "percentage": 31.8,
-        "total_runs": 22,
+        "percentage": 30.4,
+        "total_runs": 23,
         "passed_runs": 7,
-        "failed_runs": 15,
+        "failed_runs": 16,
         "trend": "stable",
-        "avg_latency_ms": 368.1
+        "avg_latency_ms": 371.2
       },
       "history": [
         {
@@ -4661,6 +4825,37 @@
               "error": null
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "failed",
+          "version": "4.0.2",
+          "api_type": "async",
+          "latency_ms": 439.64,
+          "error_summary": "Untranslated echo output: 'Hello world'",
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 4.0.2"
+            },
+            "import": {
+              "status": "passed",
+              "details": "Imported googletrans (version: 3.4.0)"
+            },
+            "translate_en_de": {
+              "status": "failed",
+              "latency_ms": 439.64,
+              "result": "Hello world",
+              "error": "Untranslated echo output: 'Hello world'"
+            },
+            "detect_language": {
+              "status": "passed",
+              "latency_ms": 461.56,
+              "result": "en",
+              "error": null
+            }
+          }
         }
       ]
     },
@@ -4676,18 +4871,18 @@
       "latest_release_date": "2024-12-13T14:59:26.769903Z",
       "downloads": {
         "lifetime": 86000,
-        "year_2026": 11874,
-        "year_2026_with_mirrors": 12638,
+        "year_2026": 11998,
+        "year_2026_with_mirrors": 12763,
         "last_month": 1013,
         "last_week": 658,
-        "last_day": 83
+        "last_day": 124
       },
       "test_result": {
         "status": "failed",
         "api_type": "unknown",
         "module_name": null,
-        "elapsed_sec": 4.6,
-        "error_summary": "Failed to import candidate modules: googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_2xndy56v/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'",
+        "elapsed_sec": 3.85,
+        "error_summary": "Failed to import candidate modules: googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_3ekfudjx/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'",
         "tests": {
           "packaging": {
             "status": "passed",
@@ -4695,7 +4890,7 @@
           },
           "import": {
             "status": "failed",
-            "details": "googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_2xndy56v/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'"
+            "details": "googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_3ekfudjx/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'"
           },
           "translate_en_de": {
             "status": "pending",
@@ -4713,9 +4908,9 @@
       },
       "reliability": {
         "percentage": 0.0,
-        "total_runs": 22,
+        "total_runs": 23,
         "passed_runs": 0,
-        "failed_runs": 22,
+        "failed_runs": 23,
         "trend": "stable",
         "avg_latency_ms": null
       },
@@ -5401,6 +5596,37 @@
               "error": null
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "failed",
+          "version": "4.0.0",
+          "api_type": "unknown",
+          "latency_ms": null,
+          "error_summary": "Failed to import candidate modules: googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_3ekfudjx/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'",
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 4.0.0"
+            },
+            "import": {
+              "status": "failed",
+              "details": "googletrans: cannot import name 'ProxiesTypes' from 'httpx._types' (/tmp/test_py_googletrans_3ekfudjx/venv/lib/python3.12/site-packages/httpx/_types.py) | py_googletrans: No module named 'py_googletrans'"
+            },
+            "translate_en_de": {
+              "status": "pending",
+              "latency_ms": null,
+              "result": null,
+              "error": null
+            },
+            "detect_language": {
+              "status": "pending",
+              "latency_ms": null,
+              "result": null,
+              "error": null
+            }
+          }
         }
       ]
     },
@@ -5416,17 +5642,17 @@
       "latest_release_date": "2024-10-24T18:12:33.324166Z",
       "downloads": {
         "lifetime": 15000,
-        "year_2026": 1883,
-        "year_2026_with_mirrors": 2316,
+        "year_2026": 1887,
+        "year_2026_with_mirrors": 2322,
         "last_month": 23,
         "last_week": 5,
-        "last_day": 0
+        "last_day": 4
       },
       "test_result": {
         "status": "failed",
         "api_type": "sync",
         "module_name": "googletrans",
-        "elapsed_sec": 5.77,
+        "elapsed_sec": 4.69,
         "error_summary": "Untranslated echo output: 'Hello world'",
         "tests": {
           "packaging": {
@@ -5439,25 +5665,25 @@
           },
           "translate_en_de": {
             "status": "failed",
-            "latency_ms": 555.39,
+            "latency_ms": 405.5,
             "result": "Hello world",
             "error": "Untranslated echo output: 'Hello world'"
           },
           "detect_language": {
             "status": "passed",
-            "latency_ms": 493.27,
+            "latency_ms": 432.73,
             "result": "en",
             "error": null
           }
         }
       },
       "reliability": {
-        "percentage": 31.8,
-        "total_runs": 22,
+        "percentage": 30.4,
+        "total_runs": 23,
         "passed_runs": 7,
-        "failed_runs": 15,
+        "failed_runs": 16,
         "trend": "stable",
-        "avg_latency_ms": 378.0
+        "avg_latency_ms": 379.2
       },
       "history": [
         {
@@ -6141,6 +6367,37 @@
               "error": null
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "failed",
+          "version": "1.1.1",
+          "api_type": "sync",
+          "latency_ms": 405.5,
+          "error_summary": "Untranslated echo output: 'Hello world'",
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 1.1.1"
+            },
+            "import": {
+              "status": "passed",
+              "details": "Imported googletrans (version: 1.1.1)"
+            },
+            "translate_en_de": {
+              "status": "failed",
+              "latency_ms": 405.5,
+              "result": "Hello world",
+              "error": "Untranslated echo output: 'Hello world'"
+            },
+            "detect_language": {
+              "status": "passed",
+              "latency_ms": 432.73,
+              "result": "en",
+              "error": null
+            }
+          }
         }
       ]
     },
@@ -6156,8 +6413,8 @@
       "latest_release_date": "2023-02-15T07:30:50.094989Z",
       "downloads": {
         "lifetime": 11000,
-        "year_2026": 1204,
-        "year_2026_with_mirrors": 1627,
+        "year_2026": 1206,
+        "year_2026_with_mirrors": 1631,
         "last_month": 89,
         "last_week": 29,
         "last_day": 2
@@ -6166,7 +6423,7 @@
         "status": "failed",
         "api_type": "function",
         "module_name": "googletrans",
-        "elapsed_sec": 4.43,
+        "elapsed_sec": 3.81,
         "error_summary": "HTTPError: HTTP Error 429: Too Many Requests",
         "tests": {
           "packaging": {
@@ -6179,7 +6436,7 @@
           },
           "translate_en_de": {
             "status": "failed",
-            "latency_ms": 322.2,
+            "latency_ms": 409.57,
             "result": null,
             "error": "HTTPError: HTTP Error 429: Too Many Requests"
           },
@@ -6194,11 +6451,11 @@
       },
       "reliability": {
         "percentage": 0.0,
-        "total_runs": 22,
+        "total_runs": 23,
         "passed_runs": 0,
-        "failed_runs": 22,
+        "failed_runs": 23,
         "trend": "stable",
-        "avg_latency_ms": 472.1
+        "avg_latency_ms": 469.4
       },
       "history": [
         {
@@ -6904,6 +7161,38 @@
               "details": "detect() API not provided by this implementation"
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "failed",
+          "version": "0.2.0",
+          "api_type": "function",
+          "latency_ms": 409.57,
+          "error_summary": "HTTPError: HTTP Error 429: Too Many Requests",
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 0.2.0"
+            },
+            "import": {
+              "status": "passed",
+              "details": "Imported googletrans (version: 0.2.0)"
+            },
+            "translate_en_de": {
+              "status": "failed",
+              "latency_ms": 409.57,
+              "result": null,
+              "error": "HTTPError: HTTP Error 429: Too Many Requests"
+            },
+            "detect_language": {
+              "status": "skipped",
+              "latency_ms": null,
+              "result": null,
+              "error": null,
+              "details": "detect() API not provided by this implementation"
+            }
+          }
         }
       ]
     },
@@ -6918,18 +7207,18 @@
       "latest_release": "4.0.2",
       "latest_release_date": "2024-11-21T08:06:28.568669Z",
       "downloads": {
-        "lifetime": 10000,
-        "year_2026": 1978,
-        "year_2026_with_mirrors": 3106,
+        "lifetime": 11000,
+        "year_2026": 1982,
+        "year_2026_with_mirrors": 3111,
         "last_month": 66,
         "last_week": 790,
-        "last_day": 51
+        "last_day": 4
       },
       "test_result": {
         "status": "failed",
         "api_type": "unknown",
         "module_name": null,
-        "elapsed_sec": 4.14,
+        "elapsed_sec": 3.38,
         "error_summary": "Failed to import candidate modules: googletrans_di: No module named 'httpcore' | googletrans: No module named 'googletrans'",
         "tests": {
           "packaging": {
@@ -6956,9 +7245,9 @@
       },
       "reliability": {
         "percentage": 0.0,
-        "total_runs": 22,
+        "total_runs": 23,
         "passed_runs": 0,
-        "failed_runs": 22,
+        "failed_runs": 23,
         "trend": "stable",
         "avg_latency_ms": null
       },
@@ -7644,6 +7933,37 @@
               "error": null
             }
           }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "failed",
+          "version": "4.0.2",
+          "api_type": "unknown",
+          "latency_ms": null,
+          "error_summary": "Failed to import candidate modules: googletrans_di: No module named 'httpcore' | googletrans: No module named 'googletrans'",
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 4.0.2"
+            },
+            "import": {
+              "status": "failed",
+              "details": "googletrans_di: No module named 'httpcore' | googletrans: No module named 'googletrans'"
+            },
+            "translate_en_de": {
+              "status": "pending",
+              "latency_ms": null,
+              "result": null,
+              "error": null
+            },
+            "detect_language": {
+              "status": "pending",
+              "latency_ms": null,
+              "result": null,
+              "error": null
+            }
+          }
         }
       ]
     },
@@ -7659,17 +7979,17 @@
       "latest_release_date": "2024-06-28T14:56:29.573971Z",
       "downloads": {
         "lifetime": 2000,
-        "year_2026": 133,
-        "year_2026_with_mirrors": 407,
+        "year_2026": 135,
+        "year_2026_with_mirrors": 410,
         "last_month": 13,
         "last_week": 7,
-        "last_day": 0
+        "last_day": 2
       },
       "test_result": {
         "status": "failed",
         "api_type": "sync",
         "module_name": "googletrans_wheel",
-        "elapsed_sec": 5.48,
+        "elapsed_sec": 4.44,
         "error_summary": "AttributeError: 'NoneType' object has no attribute 'group'",
         "tests": {
           "packaging": {
@@ -7682,13 +8002,13 @@
           },
           "translate_en_de": {
             "status": "failed",
-            "latency_ms": 262.43,
+            "latency_ms": 216.4,
             "result": null,
             "error": "AttributeError: 'NoneType' object has no attribute 'group'"
           },
           "detect_language": {
             "status": "failed",
-            "latency_ms": 181.07,
+            "latency_ms": 227.59,
             "result": null,
             "error": "AttributeError: 'NoneType' object has no attribute 'group'"
           }
@@ -7696,11 +8016,11 @@
       },
       "reliability": {
         "percentage": 0.0,
-        "total_runs": 22,
+        "total_runs": 23,
         "passed_runs": 0,
-        "failed_runs": 22,
+        "failed_runs": 23,
         "trend": "stable",
-        "avg_latency_ms": 347.6
+        "avg_latency_ms": 341.9
       },
       "history": [
         {
@@ -8380,6 +8700,37 @@
             "detect_language": {
               "status": "failed",
               "latency_ms": 181.07,
+              "result": null,
+              "error": "AttributeError: 'NoneType' object has no attribute 'group'"
+            }
+          }
+        },
+        {
+          "run_id": "run_2026-11-02T05-53-09_264033+00-00",
+          "timestamp": "2026-11-02T05:53:09.264033+00:00",
+          "status": "failed",
+          "version": "3.0.0",
+          "api_type": "sync",
+          "latency_ms": 216.4,
+          "error_summary": "AttributeError: 'NoneType' object has no attribute 'group'",
+          "tests": {
+            "packaging": {
+              "status": "passed",
+              "details": "Installed version 3.0.0"
+            },
+            "import": {
+              "status": "passed",
+              "details": "Imported googletrans_wheel (version: 3.0.0)"
+            },
+            "translate_en_de": {
+              "status": "failed",
+              "latency_ms": 216.4,
+              "result": null,
+              "error": "AttributeError: 'NoneType' object has no attribute 'group'"
+            },
+            "detect_language": {
+              "status": "failed",
+              "latency_ms": 227.59,
               "result": null,
               "error": "AttributeError: 'NoneType' object has no attribute 'group'"
             }
